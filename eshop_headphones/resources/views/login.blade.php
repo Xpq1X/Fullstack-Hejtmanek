@@ -6,6 +6,10 @@
     <title>Document</title>
 </head>
 <body>
-    
+
+<nav></nav>
+<li></li>
+
+    <footer></footer>
 </body>
 </html>
