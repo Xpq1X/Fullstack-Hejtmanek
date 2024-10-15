@@ -1,21 +1,15 @@
 <?php
-
 namespace App\Http\Controllers;
-
-use App\Http\Requests\StoreProductRequest;
-use App\Http\Requests\UpdateProductRequest;
 use App\Models\Product;
-
+use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB; 
 class ProductController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     */
     public function index()
     {
-        //
+        $products = DB::table('products')->get();
+        return view('products.index',compact('products'));
     }
-
     /**
      * Show the form for creating a new resource.
      */
@@ -23,15 +17,13 @@ class ProductController extends Controller
     {
         //
     }
-
     /**
      * Store a newly created resource in storage.
      */
-    public function store(StoreProductRequest $request)
+    public function store(Request $request)
     {
         //
     }
-
     /**
      * Display the specified resource.
      */
@@ -39,7 +31,6 @@ class ProductController extends Controller
     {
         //
     }
-
     /**
      * Show the form for editing the specified resource.
      */
@@ -47,15 +38,13 @@ class ProductController extends Controller
     {
         //
     }
-
     /**
      * Update the specified resource in storage.
      */
-    public function update(UpdateProductRequest $request, Product $product)
+    public function update(Request $request, Product $product)
     {
         //
     }
-
     /**
      * Remove the specified resource from storage.
      */
